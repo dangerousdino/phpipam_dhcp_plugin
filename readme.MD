@@ -1,5 +1,7 @@
 PHPipam Module - Basic script for now work still in progress
 
+note: this will only work if mac address are inputted to PHPipam and dns name is entered
+
 Requirements
 
  - PHPipam 1.4 install with MysqlDB
