@@ -6,9 +6,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-sid', help='Enter Subnet ID')
-parser.add_argument('-r', help='Enter Subnet router')
-parser.add_argument('-dns', help='Enter Subnet ID')
-parser.add_argument('-searchd', help='Enter Subnet ID')
+parser.add_argument('-r', help='Enter Router ip')
+parser.add_argument('-dns', help='Enter Dns servers')
+parser.add_argument('-searchd', help='Enter search domain')
 args = parser.parse_args()
 
 subnetId = args.sid
