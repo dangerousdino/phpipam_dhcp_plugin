@@ -5,7 +5,7 @@ note: this will only work if mac address are inputted to PHPipam and dns name is
 Requirements
 
  - PHPipam 1.4 install with MysqlDB
- - Python3 with mysql-connector-python installed
+ - Python3 with mysql-connector-python argparse installed
  - DHCPD server installed
 
 How to Run
@@ -21,18 +21,14 @@ command = 'mkdir -p /etc/dhcp/reserved_ips'
 
 - edit /etc/dhcp/dhcpd.conf to include the files generated (continue reading for how to use cron to generate the file)
   
-  include "file directort and name her";
+  include "file directort and file name here";
 
-- for now where are static variable you will need to change to suit you needs
-  - router
-  - domainname
-  - dnsserver
-  - subnetID
+the following variables need to be passed in subnetID, router, dns, search domain:
+
+python3 ipam_dhcp.py -sid <subnetD> -r <router IP> -dns <dns server can be mutliple use comma> -searchd <search domain name>
   note: mutliple copies of the script are required for each subnet
 
 - create cron to create the files every 5 minutes (this can be changed to suit your needs)
-  
-  */5 * * * * python3 /root/scripts/ipam_dhcp.py >> /etc/dhcp/reverse_ips/filename here (ends with .conf)
-  example: */5 * * * * python3 /root/scripts/ipam_dhcp.py >> /etc/dhcp/reverse_ips/vlan_10_reserved.conf
+ */5 * * * *  python3 ipam_dhcp.py -sid <subnetD> -r <router IP> -dns <dns server can be mutliple use comma> -searchd <search domain name> >> /etc/dhcp/reserved_ips/<name of file in dhcp.conf>
 
 
