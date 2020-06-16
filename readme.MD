@@ -16,10 +16,11 @@ How to Run
 
 - copy ipam_dhcp.py to /root/scripts
 
-- create a directory /etc/dhcp/reserved_ips (doesnt really matter but it how i set mine up)
+create a directory /etc/dhcp/reserved_ips (doesnt really matter but it how i set mine up)
+
 command = 'mkdir -p /etc/dhcp/reserved_ips'
 
-- edit /etc/dhcp/dhcpd.conf to include the files generated (continue reading for how to use cron to generate the file)
+edit /etc/dhcp/dhcpd.conf to include the files generated (continue reading for how to use cron to generate the file)
   
   include "file directort and file name here";
 
