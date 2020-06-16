@@ -1,6 +1,6 @@
 PHPipam Module - Basic script for now work still in progress
 
-note: this will only work if mac address are inputted to PHPipam and dns name is entered
+note: this will only work if mac address are inputted to PHPipam and dns name is entered or reserve lookup is enabled
 
 Requirements
 
