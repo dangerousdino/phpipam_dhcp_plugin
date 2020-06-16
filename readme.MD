@@ -30,6 +30,6 @@ python3 ipam_dhcp.py -sid subnetID -r router IP -dns dns -searchd search domain
 
 - create cron to create the files every 5 minutes (this can be changed to suit your needs)
 
- */5 * * * *  python3 ipam_dhcp.py -sid subnetID -r routerIP -dns dns -searchd search domain >> /etc/dhcp/reserved_ips/name of file in dhcp.conf
+ */5 * * * *  python3 ipam_dhcp.py -sid subnetID -r routerIP -dns dns -searchd search domain >> /etc/dhcp/reserved_ips/name of file in dhcpd.conf
 
 
